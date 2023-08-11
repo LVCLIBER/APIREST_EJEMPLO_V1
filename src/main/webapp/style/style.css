@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Libre+Franklin:wght@100&display=swap');
+
+body{
+margin: 0;
+padding: 0;
+ background: #cccccc;
+ box-sizing: border-box;
+ font-family: 'Roboto', sans-serif;
+}
+header{
+ background: white;
+height: 50px;
+box-sizing: border-box;
+display: flex;
+ 
+}
+
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    width: 14%;
+    height: 100vh;
+    background: black;
+    transition: all 0.5s linear; 
+}
+
+.item{
+    color: white;
+    padding: 10px;
+}
+.wrapper-container{
+    width: 100%;
+    position: relative;
+}
+.container{
+    position: absolute;
+   background: #cccccc;
+    height: 100vh;
+    right: 0;
+    width: calc(100% - 14%);
+    box-sizing: border-box;
+    z-index: 1;
+    transition: all 0.5s linear;
+    
+}
+.container.active{ 
+  width: 100%;  
+}
+.container-informacion{
+    padding: 10px;
+    
+}
+h1{
+    margin: 0;
+}
+
+/*NUEVO REGISTRO*/
+.container-nuevoregistro{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+  
+    
+}
+#btn-abrir-modal{
+    color: #0033cc;
+    border: 1px  #0033cc solid;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: auto 0;
+  
+}
+#btn-abrir-modal:hover{
+    color: white;
+  background: #0033cc;   
+}
+.seccion-table{
+ 
+}
+.content-table{
+  height: 400px;
+     width: 100%;
+     overflow: auto;
+}
+
+table{
+  
+    width: 100%;
+    text-align: center;
+
+}
+table thead{
+    box-sizing: border-box;
+    background: black;
+    color: white;    
+}
+thead tr th{
+    padding: 5px 0; 
+}
+tbody{
+    background: white;
+}
+#btnModalEditar,#btnModaleliminar{
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+}
+#btnModalEditar{
+    background: #00cc66;
+    color: white;
+}
+#btnModaleliminar{
+    background:  red;
+    color: white;
+}
+/*modal registrar y ediat*/
+.container-modal{
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    top: -100%;
+    transition:  all 0.5s linear;
+}
+.container-modalEditar{
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    top: -100%;
+    transition:  all 0.5s linear;
+}
+.container-modal.active{
+    top: 0;
+}
+.container-modalEditar.active{
+    top: 0;
+}
+#cerrar-modal,#cerrar-modal-editar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: inline-block;
+
+}
+form{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/*#ttdni,#ttnombre,#ttedad,#btnregistrar,#btnguardar{*/
+form input{
+  
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    border: 1px #cccccc solid;
+  
+}
+#btnregistrar,#btnguardar{
+    cursor: pointer;
+    background: #00cc66;
+    color: white;
+}
+
+
